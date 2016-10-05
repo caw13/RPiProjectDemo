@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import com.dexterind.grovepi.*;
 import com.dexterind.grovepi.utils.*;
+import com.pi4j.io.i2c.I2CFactory;
 
 public class AnalogSensor extends Sensor {
   protected int pin = 0;
@@ -11,7 +12,7 @@ public class AnalogSensor extends Sensor {
 
   protected Debug debug;
 
-  public AnalogSensor(int pin, int length) throws IOException, InterruptedException {
+  public AnalogSensor(int pin, int length) throws IOException, InterruptedException, I2CFactory.UnsupportedBusNumberException {
 	super();
 	this.pin = pin;
 	this.length = length == -1 ? this.length : length;

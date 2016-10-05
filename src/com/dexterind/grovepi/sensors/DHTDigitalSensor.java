@@ -9,6 +9,7 @@ import java.util.Arrays;
 import com.dexterind.grovepi.*;
 import com.dexterind.grovepi.sensors.base.*;
 import com.dexterind.grovepi.utils.*;
+import com.pi4j.io.i2c.I2CFactory;
 
 public class DHTDigitalSensor extends DigitalSensor {
   private int moduleType = 0;
@@ -51,7 +52,7 @@ public class DHTDigitalSensor extends DigitalSensor {
 	  return (float) (needsConversion ? this.convertFtoC(hi) : hi);
   }
 
-  public DHTDigitalSensor(int pin, int moduleType, int scale) throws IOException, InterruptedException {
+  public DHTDigitalSensor(int pin, int moduleType, int scale) throws IOException, InterruptedException, I2CFactory.UnsupportedBusNumberException {
 	super(pin);
 	this.moduleType = moduleType;
 	this.scale = scale;
