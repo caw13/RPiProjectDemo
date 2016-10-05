@@ -24,6 +24,7 @@ public class LedDemo {
                 led.setBrightness(brightness);
                 Thread.sleep(100);
             }
+            led.turnOff();
         }catch(Exception e){
             e.printStackTrace();
         }
