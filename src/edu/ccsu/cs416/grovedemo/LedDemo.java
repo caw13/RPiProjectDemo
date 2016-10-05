@@ -11,8 +11,8 @@ import com.dexterind.grovepi.sensors.Led;
 public class LedDemo {
     public static void main(String[] args){
         try{
-            // Default is D3
-            int boardNumber = 3;
+            // Default is D5
+            int boardNumber = 5;
             if (args.length == 1){
               boardNumber = Integer.parseInt(args[0]);
             }
