@@ -7,11 +7,12 @@ import java.io.IOException;
 
 import com.dexterind.grovepi.*;
 import com.dexterind.grovepi.utils.*;
+import com.pi4j.io.i2c.I2CFactory;
 
 public class Sensor {
   protected Board board;
   
-  public Sensor() throws IOException, InterruptedException {
+  public Sensor() throws IOException, InterruptedException, I2CFactory.UnsupportedBusNumberException {
     board = Board.getInstance();
   }
   
