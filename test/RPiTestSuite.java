@@ -15,5 +15,6 @@ public class RPiTestSuite {
 
     public RPiTestSuite() {
         GlobalTestVariables.TEST_PI_CODE = true;
+        edu.ccsu.cs416.grovedemo.LedDemoTest.HARDWARE_CONNECTED = true;
     }
 }
