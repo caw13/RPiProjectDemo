@@ -1,3 +1,3 @@
 #/usr/bin/env bash
 # $ JAVA_OPTS='-Dconfig=default' Java/bin/runTest.sh
-cd ./bin; sudo java $JAVA_OPTS -classpath .:classes:/opt/pi4j/lib/'*' Test
+cd ./bin; sudo java $JAVA_OPTS -classpath .:classes:/opt/pi4j/lib/'*' edu.ccsu.cs416.grovedemo.LedDemoTest;
