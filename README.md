@@ -1,11 +1,16 @@
-## Java Library
-### This repository contains the Java library for the GrovePi
-#### Installation ####
-Before to proceed you should install the Pi4J libraries. The easiest way to install it is using the following command:
+## Sample simple GrovePi interaction and possible testing approach ##
+#### This repository contains the Java library for the GrovePi as well as sample code to use the sensors and a possible test framework for adjusting testing depending on platform via an environment configuration file (***config/environment.properties***) ####
 
-```curl -s get.pi4j.com | sudo bash```
+### Testing without RPi ###
+To run the tests to demo the sample code and framework, from the root repository directory compile all Java code and tests then run TestSuiteRunner from the repository root directory.  
 
-If you need more details you can visit the official website: http://pi4j.com/install.html
+```java -classpath "build\classes;build\test\classes;lib\*" TestSuiteRunner```
+
+This class will load the config/environment.properties then execute the list of test suites passed on the command line.  For the environment config you could either add it to git ignore so everyone has their own config file or have it in the repository with default being nothing enabled and then the developer turns on just the RPi hardware elements they are testing.
+
+### Testing on the RPi ###
+
+#### Clone to the RPi ####
 
 #### Compile and Execute the test program ####
 Once your installation is complete and your local repository is ready then you can compile the GrovePi libraries and run the test program.
