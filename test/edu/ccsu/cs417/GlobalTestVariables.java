@@ -1,4 +1,4 @@
-package edu.ccsu.cs416;
+package edu.ccsu.cs417;
 
 /**
  * This class contains any variables you want available for turning on/off

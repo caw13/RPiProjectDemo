@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.ccsu.cs416.grovedemo;
+package edu.ccsu.cs417.grovedemo;
 
-import edu.ccsu.cs416.GlobalTestVariables;
+import edu.ccsu.cs417.grovedemo.LedDemo;
+import edu.ccsu.cs417.GlobalTestVariables;
 import junit.framework.TestCase;
 import org.junit.Test;
 

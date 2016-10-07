@@ -1,5 +1,4 @@
 
-import edu.ccsu.cs416.GlobalTestVariables;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
@@ -9,7 +8,7 @@ import org.junit.runners.Suite;
  */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-    edu.ccsu.cs416.grovedemo.LedDemoTest.class
+    edu.ccsu.cs417.grovedemo.LedDemoTest.class
 })
-public class NoRPilTestSuite {
+public class NoRPiTestSuite {
 }
