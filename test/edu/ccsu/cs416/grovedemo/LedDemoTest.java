@@ -20,7 +20,7 @@ public class LedDemoTest extends TestCase {
      * This variable allows you to easily turn on/off all tests that are
      * dependent on the related hardware device for this test being connected
      */
-    public static boolean HARDWARE_CONNECTED = false;
+    
 
     public LedDemoTest(String testName) {
         super(testName);
@@ -31,7 +31,7 @@ public class LedDemoTest extends TestCase {
      */
     @Test
     public void testRunDemo() throws Exception {
-        if (GlobalTestVariables.TEST_PI_CODE && HARDWARE_CONNECTED) {
+        if (GlobalTestVariables.TEST_PI_CODE && GlobalTestVariables.LED_D3_CONNECTED) {
             System.out.println("LedDemo runDemo");
             try {
                 LedDemo instance = new LedDemo(3);

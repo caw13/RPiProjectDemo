@@ -1,4 +1,8 @@
 
+import edu.ccsu.cs416.GlobalTestVariables;
+import java.io.FileInputStream;
+import java.lang.reflect.Field;
+import java.util.Properties;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
@@ -16,6 +20,15 @@ public class TestSuiteRunner {
 
     public static void main(String[] args) {
         try {
+            // Read environment configuration from "environment.properties"
+            FileInputStream environmentProperties = new FileInputStream( "config/environment.properties");
+            Properties props = new Properties();
+            props.load(environmentProperties);
+            for (String key : props.stringPropertyNames()){
+                Field environmentSetting = GlobalTestVariables.class.getField(key);
+                environmentSetting.setBoolean(null, Boolean.parseBoolean(props.getProperty(key)));
+                System.out.println("Set "+key+" to "+Boolean.parseBoolean(props.getProperty(key)));
+            }
             if (args.length == 0) {
                 System.out.println("Enter test suites to run");
             } else {

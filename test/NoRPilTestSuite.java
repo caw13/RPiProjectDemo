@@ -12,8 +12,4 @@ import org.junit.runners.Suite;
     edu.ccsu.cs416.grovedemo.LedDemoTest.class
 })
 public class NoRPilTestSuite {
-
-    public NoRPilTestSuite() {
-        GlobalTestVariables.TEST_PI_CODE = true;
-    }
 }

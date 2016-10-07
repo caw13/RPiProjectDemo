@@ -9,4 +9,5 @@ package edu.ccsu.cs416;
 public class GlobalTestVariables {
     /** Enables/disables all tests that require being run on the RPi hardware */
     public static boolean TEST_PI_CODE = false;
+    public static boolean LED_D3_CONNECTED = false;
 }
