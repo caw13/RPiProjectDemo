@@ -7,6 +7,7 @@ package edu.ccsu.cs416.grovedemo;
 
 import edu.ccsu.cs416.GlobalTestVariables;
 import junit.framework.TestCase;
+import org.junit.Test;
 
 /**
  * To execute this test an Led should be connected to port D3
@@ -19,7 +20,7 @@ public class LedDemoTest extends TestCase {
      * This variable allows you to easily turn on/off all tests that are
      * dependent on the related hardware device for this test being connected
      */
-    public static final boolean HARDWARE_CONNECTED = true;
+    public static boolean HARDWARE_CONNECTED = false;
 
     public LedDemoTest(String testName) {
         super(testName);
@@ -28,6 +29,7 @@ public class LedDemoTest extends TestCase {
     /**
      * Test of runDemo method, of class LedDemo.
      */
+    @Test
     public void testRunDemo() throws Exception {
         if (GlobalTestVariables.TEST_PI_CODE && HARDWARE_CONNECTED) {
             System.out.println("LedDemo runDemo");

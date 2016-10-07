@@ -8,5 +8,5 @@ package edu.ccsu.cs416;
  */
 public class GlobalTestVariables {
     /** Enables/disables all tests that require being run on the RPi hardware */
-    public static final boolean TEST_PI_CODE = true;
+    public static boolean TEST_PI_CODE = false;
 }
