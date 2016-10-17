@@ -30,6 +30,8 @@ To compile the library run the following command:
 
 ```$ ./scripts/compile.sh ```
 
+Modify the ***config/environment.properties*** to enable testing on the RPi and of the LED
+
 Now connect a Led to sensor to the GrovePi in port D3 and then run the following:
 
 ```$ ./scripts/Test.sh```
