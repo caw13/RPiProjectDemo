@@ -6,7 +6,8 @@ import java.io.IOException;
 
 /**
  * Simple demo of interacting with LED in GrovePi board Default is for LED to be
- * connected to D3
+ * connected to D3, alternatively can pass in a different
+ * Grove connection by number 3 -> D3
  *
  * @author caw13
  */
@@ -37,7 +38,8 @@ public class LedDemo {
             if (args.length == 1) {
                 boardNumber = Integer.parseInt(args[0]);
             }
-
+            LedDemo ledDemo = new LedDemo(boardNumber);
+            ledDemo.runDemo();
         } catch (Exception e) {
             e.printStackTrace();
         }
